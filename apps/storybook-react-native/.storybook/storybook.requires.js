@@ -32,6 +32,7 @@ try {
 const getStories = () => {
   return [
     require("../../../packages/app/src/components/text/LmText.stories.tsx"),
+    require("../../../packages/app/src/features/home/screen.stories.tsx"),
   ];
 };
 
