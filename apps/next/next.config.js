@@ -6,6 +6,8 @@ const withPlugins = require('next-compose-plugins')
 const withTM = require('next-transpile-modules')([
   'solito',
   'nativewind',
+  'react-native-vector-icons',
+  'react-native-paper',
   'app',
 ])
 
