@@ -8,15 +8,6 @@ const config = {
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
-    // {
-    //   name: '@storybook/addon-postcss',
-    //   options: {
-    //     postcssLoaderOptions: {
-    //       implementation: require('postcss')
-    //     }
-    //   }
-    // },
-    // "storybook-addon-next",
     {
       name: '@storybook/addon-react-native-web',
       options: {
@@ -39,10 +30,6 @@ const config = {
   framework: '@storybook/react',
   // typescript: { reactDocgen: false },
   webpackFinal: async (config, { configType }) => {
-    // config.resolve.fallback = {
-    //     stream: require.resolve("stream-browserify"),
-    //     path: require.resolve("path-browserify"),
-    // };
     config.module.rules.push({
       test: /\.css$/,
       use: [

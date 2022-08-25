@@ -16,6 +16,7 @@
     "native": "cd apps/expo && expo start",
     "web": "cd apps/next && yarn next",
     "sb:web": "cd apps/storybook-react && yarn sb",
-    "sb:native": "cd apps/storybook-react-native && yarn start"
+    "sb:native": "cd apps/storybook-react-native && yarn start",
+    "test": "cd apps/tests && yarn test"
   }
 }
