@@ -10,6 +10,11 @@
     ],
     "ios": {
       "bundleIdentifier": "com.solito.blank"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a83ccb10-4c38-4543-85dc-87752881c44e"
+      }
     }
   }
 }
