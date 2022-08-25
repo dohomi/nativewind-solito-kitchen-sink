@@ -7,7 +7,7 @@ module.exports = {
     //     "../../**/?(*.)+(spec|test).[jt]s?(x)"
     // ],
     roots:[
-      "../../packages/"
+      "../../"
     ],
     "setupFiles": [
         "<rootDir>/jest.setup.js"
