@@ -10,6 +10,7 @@ module.exports = {
   },
   // important: 'html',
   plugins: [
-    'nativewind/tailwind/css'
+    require('nativewind/tailwind/css'),
+    require('daisyui')
   ]
 }

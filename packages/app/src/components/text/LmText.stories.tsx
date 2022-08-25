@@ -1,7 +1,7 @@
 import { LmText } from './LmText'
 
 export default {
-  title: 'test/Container',
+  title: 'ui/Text',
   component: LmText
 }
 
