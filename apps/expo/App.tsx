@@ -1,10 +1,10 @@
-import { NativeNavigation } from 'app/navigation/native'
-import { Provider } from 'app/provider'
+import { NativeNavigation } from 'app/src/navigation/native'
+import { LmProvider } from 'app/src/provider'
 
 export default function App() {
   return (
-    <Provider>
+    <LmProvider>
       <NativeNavigation />
-    </Provider>
+    </LmProvider>
   )
 }

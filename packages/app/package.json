@@ -5,11 +5,9 @@
   "dependencies": {
     "@react-navigation/native": "^6.0.8",
     "@react-navigation/native-stack": "^6.5.0",
-    "dripsy": "^3.6.0",
     "expo-linking": "^3.0.0",
-    "moti": "canary",
     "react-native-reanimated": "2.8.0",
-    "solito": "latest",
+    "solito": "^0.0.26",
     "nativewind": "^2.0.0-next.65"
   },
   "devDependencies": {

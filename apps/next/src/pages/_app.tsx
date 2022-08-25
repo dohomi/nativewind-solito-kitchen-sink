@@ -1,9 +1,9 @@
-import { Provider } from 'app/provider'
 import Head from 'next/head'
 import React from 'react'
 import type { SolitoAppProps } from 'solito'
 import 'raf/polyfill'
 import '../styles/global.css'
+import { LmProvider } from 'app/src/provider'
 
 function MyApp({ Component, pageProps }: SolitoAppProps) {
   return (
@@ -16,9 +16,9 @@ function MyApp({ Component, pageProps }: SolitoAppProps) {
         />
         <link rel="icon" href="/apps/next/public/favicon.ico" />
       </Head>
-      <Provider>
+      <LmProvider>
         <Component {...pageProps} />
-      </Provider>
+      </LmProvider>
     </>
   )
 }

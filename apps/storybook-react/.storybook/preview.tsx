@@ -1,3 +1,4 @@
+import '../global.css'
 // import * as NextImage from 'next/image'
 
 

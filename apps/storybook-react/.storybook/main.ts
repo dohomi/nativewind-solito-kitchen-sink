@@ -1,19 +1,21 @@
+import path from 'path'
+
 const config = {
   stories: [
     '../stories/**/*.stories.@(js|jsx|ts|tsx|mdx)',
-    '../../../packages/app/**/*.stories.@(js|jsx|ts|tsx|mdx)'
+    '../../../packages/app/src/**/*.stories.@(js|jsx|ts|tsx|mdx)'
   ],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
-    {
-      name: '@storybook/addon-postcss',
-      options: {
-        postcssLoaderOptions: {
-          implementation: require('postcss')
-        }
-      }
-    },
+    // {
+    //   name: '@storybook/addon-postcss',
+    //   options: {
+    //     postcssLoaderOptions: {
+    //       implementation: require('postcss')
+    //     }
+    //   }
+    // },
     // "storybook-addon-next",
     {
       name: '@storybook/addon-react-native-web',
@@ -21,15 +23,12 @@ const config = {
         modulesToTranspile: [
           'solito',
           'react-native-vector-icons',
-          'dripsy',
-          '@dripsy/core',
-          'moti',
           'nativewind',
           'app'
         ],
         babelPlugins: [
-          'react-native-reanimated/plugin',
-          ['nativewind/babel', { mode: 'transformOnly' }]
+          'react-native-reanimated/plugin'
+          // 'nativewind/babel'
         ]
       }
     }
@@ -44,6 +43,20 @@ const config = {
     //     stream: require.resolve("stream-browserify"),
     //     path: require.resolve("path-browserify"),
     // };
+    config.module.rules.push({
+      test: /\.css$/,
+      use: [
+        {
+          loader: 'postcss-loader',
+          options: {
+            postcssOptions: {
+              plugins: [require('tailwindcss'), require('autoprefixer')]
+            }
+          }
+        }
+      ],
+      include: path.resolve(__dirname, '../')
+    })
 
     return {
       ...config

@@ -5,9 +5,6 @@ const withImages = require('next-images')
 const withPlugins = require('next-compose-plugins')
 const withTM = require('next-transpile-modules')([
   'solito',
-  'dripsy',
-  '@dripsy/core',
-  'moti',
   'nativewind',
   'app',
 ])

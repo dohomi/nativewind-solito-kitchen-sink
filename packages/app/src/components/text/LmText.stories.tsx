@@ -11,3 +11,9 @@ export const Basic = Template.bind({})
 Basic.args = {
   children: 'some text'
 }
+
+export const LargeText = Template.bind({})
+LargeText.args = {
+  children: 'some text',
+  className: 'text-4xl'
+}
