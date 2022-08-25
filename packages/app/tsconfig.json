@@ -1,0 +1,4 @@
+{
+  "include": ["globals.d.ts", "**/*.ts", "**/*.tsx"],
+  "extends": "../../tsconfig"
+}
