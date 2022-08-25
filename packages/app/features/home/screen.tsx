@@ -3,7 +3,7 @@ import { TextLink } from 'solito/link'
 import { MotiLink } from 'solito/moti'
 import Ionicons from '@expo/vector-icons/Ionicons'
 import {Text as RText} from 'react-native'
-import { LmContainerRed } from '../../components/container/LmContainerRed'
+import { LmContainerRed } from '../../components/container/LmText'
 
 export function HomeScreen() {
   const sx = useSx()

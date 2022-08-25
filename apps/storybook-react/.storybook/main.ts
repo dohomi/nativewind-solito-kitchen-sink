@@ -34,22 +34,10 @@ const config = {
       }
     }
   ],
-  features: {
-    babelModeV7: true,
-  },
   core: {
     builder: 'webpack5'
   },
   framework: '@storybook/react',
-  typescript: {
-    check: false,
-    checkOptions: {},
-    reactDocgen: 'react-docgen-typescript',
-    reactDocgenTypescriptOptions: {
-      shouldExtractLiteralValuesFromEnum: true,
-      propFilter: (prop) => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true)
-    }
-  },
   // typescript: { reactDocgen: false },
   webpackFinal: async (config, { configType }) => {
     // config.resolve.fallback = {
