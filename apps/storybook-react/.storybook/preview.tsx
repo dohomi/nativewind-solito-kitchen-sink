@@ -10,13 +10,16 @@ import { LmPaperProvider } from 'app/src/provider/LmPaperProvider'
 //   value: (props) => <OriginalNextImage {...props} unoptimized />
 // })
 
-const InjectCss = (Story) => (
-  <LmPaperProvider>
-    <Story />
-  </LmPaperProvider>
-)
 
-export const decorators = [InjectCss]
+export const decorators = [(Story, props) => {
+  console.log(props.globals)
+  const light = props.globals.backgrounds?.value === '#fff'
+  return (
+    <LmPaperProvider storybookBackground={light ? 'light' : 'dark'}>
+      <Story />
+    </LmPaperProvider>
+  )
+}]
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -25,5 +28,18 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/
     }
+  },
+  backgrounds: {
+    default: 'dark',
+    values: [
+      {
+        name: 'dark',
+        value: '#000'
+      },
+      {
+        name: 'light',
+        value: '#fff'
+      }
+    ]
   }
 }

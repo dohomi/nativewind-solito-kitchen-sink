@@ -1,4 +1,8 @@
-import { TextInput } from 'react-native'
-import { styled } from 'nativewind'
+import { Rating } from 'react-native-ratings'
 
-export const LmRating = styled(TextInput, 'mask mask-star')
+
+export function LmRating() {
+  return (
+    <Rating />
+  )
+}

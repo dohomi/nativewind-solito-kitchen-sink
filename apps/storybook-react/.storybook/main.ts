@@ -8,6 +8,7 @@ const config = {
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
+    // 'storybook-addon-themes',
     {
       name: '@storybook/addon-react-native-web',
       options: {
@@ -15,6 +16,7 @@ const config = {
           'solito',
           'react-native-vector-icons',
           'nativewind',
+          'react-native-paper-dropdown',
           'app'
         ],
         babelPlugins: [

@@ -1,4 +1,4 @@
-import { TextInput } from 'react-native'
+import { TextInput } from 'react-native-paper'
 import { styled } from 'nativewind'
 
-export const LmTextInput = styled(TextInput, 'input w-full max-w-xs')
+export const LmTextInput = styled(TextInput)
