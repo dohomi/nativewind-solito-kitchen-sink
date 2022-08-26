@@ -11,6 +11,6 @@ module.exports = {
   // important: 'html',
   plugins: [
     require('nativewind/tailwind/css'),
-    require('daisyui')
+    // require('daisyui')
   ]
 }

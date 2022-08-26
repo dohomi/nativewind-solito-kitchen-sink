@@ -11,7 +11,8 @@
     "nativewind": "^2.0.0-next.65",
     "daisyui": "^2.24.0",
     "react-native-paper": "^5.0.0-rc.4",
-    "react-native-vector-icons": "^9.2.0"
+    "react-native-vector-icons": "^9.2.0",
+    "clsx": "^1.2.1"
   },
   "devDependencies": {
     "@my/tests": "*",
