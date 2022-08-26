@@ -32,6 +32,7 @@ try {
 const getStories = () => {
   return [
     require("../../../packages/app/src/components/card/LmCard.stories.tsx"),
+    require("../../../packages/app/src/components/form/button/IconButton.stories.tsx"),
     require("../../../packages/app/src/components/form/button/LmButton.stories.tsx"),
     require("../../../packages/app/src/components/form/input/LmInput.stories.tsx"),
     require("../../../packages/app/src/components/form/rating/LmRating.stories.tsx"),
