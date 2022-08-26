@@ -46,18 +46,6 @@ const config = {
       include: path.resolve(__dirname, '../')
     })
 
-
-    // config.module.rules.push({
-    //   test: /\.ttf$/,
-    //   loader: "url-loader", // or directly file-loader
-    //   include: path.resolve(__dirname, "../node_modules/react-native-vector-icons"),
-    // });
-    config.module.rules.push({
-      test: /\.(jpg|png|woff|woff2|eot|ttf|svg)$/,
-      loader: "file-loader", // or directly file-loader
-      include: path.resolve(__dirname, "../node_modules/react-native-vector-icons"),
-    });
-
     return {
       ...config
     }
