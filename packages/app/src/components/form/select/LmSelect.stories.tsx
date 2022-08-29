@@ -1,11 +1,12 @@
 import { LmSelect } from './LmSelect'
+import { selectDemoOptions } from './demoOptions'
 
 export default {
   title: 'ui/form/Select',
   component: LmSelect
 }
 
-const options = [{}, { value: 1, label: 'first' }, { value: 2, label: 'second' }]
+const options = selectDemoOptions
 
 
 const Template = (args) => <LmSelect {...args} />
