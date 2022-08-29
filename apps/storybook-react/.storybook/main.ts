@@ -16,12 +16,10 @@ const config = {
           'solito',
           'react-native-vector-icons',
           'nativewind',
-          'react-native-paper-dropdown',
           'app'
         ],
         babelPlugins: [
-          'react-native-reanimated/plugin',
-          'react-native-paper/babel'
+          'react-native-reanimated/plugin'
           // 'nativewind/babel'
         ]
       }

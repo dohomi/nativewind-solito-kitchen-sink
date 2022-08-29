@@ -1,40 +1,28 @@
-import DropDown, { DropDownPropsInterface } from 'react-native-paper-dropdown'
+import { Picker, PickerProps } from '@react-native-picker/picker'
 import { useState } from 'react'
+import { styled } from 'nativewind'
 
 
 // type LmSelectProps<T> = (AutocompleteSingleProps<T> | AutocompleteMultipleProps<T>)
-type LmSelectProps<T> = DropDownPropsInterface & {
+type LmSelectProps = PickerProps & {
   options: { value: number | string, label: string }[]
 }
 
-export function LmSelect<T>({ options }: LmSelectProps<T>) {
+export const LmPickerStyled = styled(Picker)
+
+export function LmSelect({ options, selectedValue }: LmSelectProps) {
   const [showDropDown, setShowDropDown] = useState(false)
-  const [v, setV] = useState<string | string[]>('')
+  const [v, setV] = useState<string | number | null>(selectedValue || null)
 
   return (
-
-    <DropDown
-      visible={showDropDown}
-      showDropDown={() => setShowDropDown(true)}
-      onDismiss={() => setShowDropDown(false)}
-      value={v} setValue={(_value) => {
-
-    }} list={options} />
+    <LmPickerStyled selectedValue={v}
+                    className={'select'}
+                    onValueChange={(itemValue, itemIndex) => {
+                      setV(itemValue)
+                    }}>
+      {(options || []).map(option => (
+        <Picker.Item label={option.label} value={option.value} key={option.value} />
+      ))}
+    </LmPickerStyled>
   )
-  // return (
-  //   <AutocompleteScrollView>
-  //     <Autocomplete
-  //       multiple={multiple}
-  //       onChange={(newValue) => {
-  //         console.log({ newValue })
-  //       }}
-  //       value={multiple ? (value || []) : (value || null)}
-  //       options={options}
-  //       inputProps={{
-  //         placeholder: 'Select user'
-  //         // ...all other props which are available in react native paper
-  //       }}
-  //     />
-  //   </AutocompleteScrollView>
-  // )
 }

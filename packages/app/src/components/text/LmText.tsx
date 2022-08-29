@@ -1,4 +1,4 @@
-import { Text } from 'react-native-paper'
+import { Text } from 'react-native'
 import { styled } from 'nativewind'
 
 export const LmText = styled(Text)

@@ -5,7 +5,7 @@ export default {
   component: LmSelect
 }
 
-const options = [{ value: 1, label: 'first' }, { value: 2, label: 'second' }]
+const options = [{}, { value: 1, label: 'first' }, { value: 2, label: 'second' }]
 
 
 const Template = (args) => <LmSelect {...args} />
@@ -16,10 +16,9 @@ Basic.args = {
   options
 }
 
-export const Multiple = Template.bind({})
-Multiple.args = {
-  name: 'multi',
-  multiple: true,
+export const SinglePreselect = Template.bind({})
+SinglePreselect.args = {
+  name: 'single_pre',
   value: [options[0]],
   options
 }

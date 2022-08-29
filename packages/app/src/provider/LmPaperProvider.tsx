@@ -16,7 +16,6 @@ export function LmPaperProvider({ children, storybookBackground, ...rest }: LmPa
   console.log(colorScheme)
   return (
     <>
-
       <Provider {...rest} theme={colorScheme === 'dark' ? CombinedDarkTheme : CombinedDefaultTheme}>{children}
       </Provider>
     </>

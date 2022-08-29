@@ -18,6 +18,7 @@
     "sb:web": "cd apps/storybook-react && yarn sb",
     "sb:native": "cd apps/storybook-react-native && yarn start",
     "test": "cd apps/tests && yarn test",
-    "eas:dev:ios": "cd apps/expo && yarn eas:dev:ios"
+    "eas:dev:ios": "cd apps/expo && yarn eas:dev:ios",
+    "eas:dev:android": "cd apps/expo && yarn eas:dev:android"
   }
 }

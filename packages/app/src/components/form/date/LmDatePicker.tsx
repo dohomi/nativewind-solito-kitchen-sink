@@ -1,7 +1,6 @@
 import DateTimePicker from '@react-native-community/datetimepicker'
 import { useState } from 'react'
-import { Platform } from 'react-native'
-import { Button } from 'react-native-paper'
+import { Button, Platform } from 'react-native'
 import { LmText } from '../../text/LmText'
 
 type LmDatePickerProps = {}
@@ -41,7 +40,6 @@ export function LmDatePicker({}: LmDatePickerProps) {
         <DateTimePicker
           testID='dateTimePicker'
           value={date}
-          mode={mode}
           is24Hour={true}
           onChange={onChange}
         />

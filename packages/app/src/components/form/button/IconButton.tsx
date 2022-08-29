@@ -1,4 +1,4 @@
 import { styled } from 'nativewind'
-import { IconButton } from 'react-native-paper'
+import { Button } from 'react-native'
 
-export const LmIconButton = styled(IconButton)
+export const LmIconButton = styled(Button)

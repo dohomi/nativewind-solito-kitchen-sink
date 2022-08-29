@@ -1,5 +1,5 @@
 import '../global.css'
-import { LmPaperProvider } from 'app/src/provider/LmPaperProvider'
+// import { LmPaperProvider } from 'app/src/provider/LmPaperProvider'
 // import * as NextImage from 'next/image'
 
 
@@ -15,9 +15,7 @@ export const decorators = [(Story, props) => {
   console.log(props.globals)
   const light = props.globals.backgrounds?.value === '#fff'
   return (
-    <LmPaperProvider storybookBackground={light ? 'light' : 'dark'}>
-      <Story />
-    </LmPaperProvider>
+    <Story />
   )
 }]
 
