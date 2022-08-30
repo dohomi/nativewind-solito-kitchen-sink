@@ -17,8 +17,7 @@ const config = {
   webpack: (config, options) => {
     config.module.rules.push({
       test: /\.(jpg|png|woff|woff2|eot|ttf|svg)$/,
-      type: 'asset/resource',
-      include: path.resolve(__dirname, 'node_modules/react-native-paper')
+      type: 'asset/resource'
     })
     return config
   }

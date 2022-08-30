@@ -2,7 +2,6 @@ import { NavigationContainer } from '@react-navigation/native'
 import * as Linking from 'expo-linking'
 import { useMemo } from 'react'
 import { useColorScheme } from 'nativewind'
-import { CombinedDarkTheme, CombinedDefaultTheme } from '../theme/theme'
 
 export function NavigationProvider({
                                      children
@@ -12,7 +11,6 @@ export function NavigationProvider({
   const { colorScheme } = useColorScheme()
   return (
     <NavigationContainer
-      theme={colorScheme === 'dark' ? CombinedDarkTheme : CombinedDefaultTheme}
       linking={useMemo(
         () => ({
           prefixes: [Linking.createURL('/')],
@@ -20,6 +18,7 @@ export function NavigationProvider({
             initialRouteName: 'home',
             screens: {
               home: '',
+              'components-overview': 'components-overview',
               'user-detail': 'user/:id'
             }
           }

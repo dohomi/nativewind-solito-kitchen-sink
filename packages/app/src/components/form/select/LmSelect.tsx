@@ -12,16 +12,16 @@ export const LmPickerStyled = styled(Picker)
 
 export function LmSelect({ options, selectedValue }: LmSelectProps) {
   const [showDropDown, setShowDropDown] = useState(false)
-  const [v, setV] = useState<string | number | null>(selectedValue || null)
-
+  const [v, setV] = useState<string | number>(selectedValue || options[0]?.value || 0)
+  console.log(options)
   return (
     <LmPickerStyled selectedValue={v}
                     className={'select'}
-                    onValueChange={(itemValue, itemIndex) => {
+                    onValueChange={(itemValue:string | number, itemIndex) => {
                       setV(itemValue)
                     }}>
-      {(options || []).map(option => (
-        <Picker.Item label={option.label} value={option.value} key={option.value} />
+      {(options || []).map((option, i) => (
+        <Picker.Item label={option.label} value={option.value} key={option.value + '_' + i} />
       ))}
     </LmPickerStyled>
   )

@@ -13,8 +13,8 @@ export function HomeScreen() {
         <LmText className={'text-4xl'}>
           Some text
         </LmText>
-        <LmButton>Some Button</LmButton>
-        <LmIconButton icon={'camera'}></LmIconButton>
+        <LmButton title={'Some Button'} />
+        <LmIconButton icon={'camera'} title={''} />
         <RText className={'bg-sky-100'}>Blue text bg</RText>
       </View>
       <View />
@@ -23,7 +23,11 @@ export function HomeScreen() {
       >
         Regular Link
       </TextLink>
-
+      <TextLink
+        href='/components-overview'
+      >
+        Component overview
+      </TextLink>
     </View>
   )
 }
