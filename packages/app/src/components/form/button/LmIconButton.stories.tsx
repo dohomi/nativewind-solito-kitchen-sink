@@ -1,7 +1,7 @@
-import { LmIconButton } from './IconButton'
+import { LmIconButton } from './LmIconButton'
 
 export default {
-  title: 'ui/form/IconButton',
+  title: 'ui/form/LmIconButton',
   component: LmIconButton
 }
 

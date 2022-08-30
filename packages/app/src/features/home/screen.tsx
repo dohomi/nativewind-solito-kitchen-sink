@@ -1,9 +1,8 @@
 import { TextLink } from 'solito/link'
-import Ionicons from '@expo/vector-icons/Ionicons'
 import { Text as RText, View } from 'react-native'
 import { LmText } from '../../components/text/LmText'
 import { LmButton } from '../../components/form/button/LmButton'
-import { LmIconButton } from '../../components/form/button/IconButton'
+import { LmIconButton } from '../../components/form/button/LmIconButton'
 
 export function HomeScreen() {
 
@@ -23,11 +22,14 @@ export function HomeScreen() {
       >
         Regular Link
       </TextLink>
-      <TextLink
-        href='/components-overview'
-      >
-        Component overview
-      </TextLink>
+
+      <View />
+      <View>
+        <TextLink
+          href='/components-overview'>
+          Component overview
+        </TextLink>
+      </View>
     </View>
   )
 }

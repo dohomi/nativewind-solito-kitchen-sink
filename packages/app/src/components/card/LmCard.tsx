@@ -1,6 +1,5 @@
-import { Text, View, ViewProps } from 'react-native'
+import { Text, View } from 'react-native'
 import { styled } from 'nativewind'
-import { ReactNode } from 'react'
 
 export const LmCard = styled(View, 'card bg-base-100 w-96')
 export const LmCardBody = styled(View, 'card-body')

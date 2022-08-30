@@ -19,6 +19,11 @@
     "sb:native": "cd apps/storybook-react-native && yarn start",
     "test": "cd apps/tests && yarn test",
     "eas:dev:ios": "cd apps/expo && yarn eas:dev:ios",
-    "eas:dev:android": "cd apps/expo && yarn eas:dev:android"
+    "eas:dev:android": "cd apps/expo && yarn eas:dev:android",
+    "clean": "yarn clean:node-modules & yarn clean:build",
+    "clean:turbo": "rm -rf ./node_modules/.cache/turbo",
+    "clean:build": "rm -rf apps/.next",
+    "clean:node-modules": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
+    "clean:native": "yarn clean && rm -rf apps/storybook-react-native/android && rm -rf apps/storybook-react-native/ios && rm -rf apps/expo/android && rm -rf apps/expo/ios && rm -rf apps/expo/.expo"
   }
 }
