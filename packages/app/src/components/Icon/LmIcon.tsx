@@ -13,8 +13,7 @@ const IonStyled = styled(Ionicons)
 export function LmIcon(props: LmIconProps) {
   return (
     <>
-      <Text
-    <IonStyled name={props.name} size={props.size || 24} />
+      <IonStyled name={props.name} size={props.size || 24} />
     </>
   )
 }

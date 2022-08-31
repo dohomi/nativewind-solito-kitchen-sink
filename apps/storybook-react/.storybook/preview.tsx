@@ -19,20 +19,26 @@ const ThemeMap = {
 }
 
 export const decorators = [(Story, props) => {
-  console.log(props.globals)
   const theme = props.globals.backgrounds?.value ? (ThemeMap[props.globals.backgrounds?.value] || 'dark') : 'dark'
-  const { colorScheme, setColorScheme } = useColorScheme()
-
-
+  const { setColorScheme } = useColorScheme()
   useEffect(
     () => {
-      setColorScheme(theme)
-      console.log(theme)
+      let active = true
+      if (active) {
+        const rootEl = document.documentElement
+        rootEl?.setAttribute('data-scheme', theme)
+        setColorScheme(theme)
+      }
+      return () => {
+        active = false
+      }
     },
     [theme, setColorScheme]
   )
   return (
-    <Story />
+    <>
+      <Story />
+    </>
   )
 }]
 

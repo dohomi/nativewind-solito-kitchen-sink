@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {}
   },
-  darkMode: 'class',
+  // darkMode: 'class',
   // important: 'html',
   plugins: [
     require('nativewind/tailwind/css'),
