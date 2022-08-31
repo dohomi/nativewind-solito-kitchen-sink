@@ -1,5 +1,6 @@
 import React from 'react'
 import Ionicons from '@expo/vector-icons/Ionicons'
+import { styled } from 'nativewind'
 
 type LmIconProps = {
   name: keyof typeof Ionicons.glyphMap;
@@ -7,6 +8,13 @@ type LmIconProps = {
   color?: string
 }
 
+const IonStyled = styled(Ionicons)
+
 export function LmIcon(props: LmIconProps) {
-  return <Ionicons name={props.name} size={props.size || 24} color={props.color || 'black'} />
+  return (
+    <>
+      <Text
+    <IonStyled name={props.name} size={props.size || 24} />
+    </>
+  )
 }
