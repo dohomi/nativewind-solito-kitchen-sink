@@ -28,6 +28,9 @@ export const decorators = [(Story, props) => {
         const rootEl = document.documentElement
         rootEl?.setAttribute('data-scheme', theme)
         setColorScheme(theme)
+        const sbMain: HTMLDivElement = document.querySelector('.sb-show-main') as HTMLDivElement
+        console.log(sbMain)
+        sbMain.style.background = 'inherit !important'
       }
       return () => {
         active = false
