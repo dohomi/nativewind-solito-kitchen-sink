@@ -1,8 +1,8 @@
 import { TextLink } from 'solito/link'
 import { Text as RText, View } from 'react-native'
 import { LmText } from '../../components/text/LmText'
-import { LmButton } from '../../components/form/button/LmButton'
-import { LmIconButton } from '../../components/form/button/LmIconButton'
+import { LmButton } from '../../components/button/LmButton'
+import { LmIconButton } from '../../components/button/LmIconButton'
 
 export function HomeScreen() {
 

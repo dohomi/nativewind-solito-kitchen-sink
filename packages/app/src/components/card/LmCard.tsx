@@ -1,9 +1,10 @@
-import { Text, View } from 'react-native'
+import { View } from 'react-native'
 import { styled } from 'nativewind'
+import { LmText } from '../text/LmText'
 
-export const LmCard = styled(View, 'card bg-base-100 w-96')
+export const LmCard = styled(View, 'card')
 export const LmCardBody = styled(View, 'card-body')
-export const LmCardTitle = styled(Text, 'card-title')
+export const LmCardTitleStyled = styled(LmText)
 export const LmCardActions = styled(View, 'card-actions justify-end')
 
 type LmCardWithActionProps = {
@@ -12,12 +13,16 @@ type LmCardWithActionProps = {
   buttonText: string
 }
 
+export function LmCardTitle({children}) {
+  return <LmText baseClassNames={'card-title'}>{children}</LmText>
+}
+
 export function LmCardWithAction({title, description, buttonText}: LmCardWithActionProps){
   return (
     <LmCard>
       <LmCardBody>
         <LmCardTitle>{title}</LmCardTitle>
-        <Text>{description}</Text>
+        <LmText>{description}</LmText>
         <LmCardActions>
           <button className={'btn btn-primary'}>{buttonText}</button>
         </LmCardActions>

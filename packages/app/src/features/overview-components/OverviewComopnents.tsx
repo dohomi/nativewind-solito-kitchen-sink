@@ -1,9 +1,9 @@
 import { LmView } from '../../components/layout/LmView'
 import { LmText } from '../../components/text/LmText'
-import { LmButton } from '../../components/form/button/LmButton'
+import { LmButton } from '../../components/button/LmButton'
 import { LmSelect } from '../../components/form/select/LmSelect'
 import { selectDemoOptions } from '../../components/form/select/demoOptions'
-import { LmIconButton } from '../../components/form/button/LmIconButton'
+import { LmIconButton } from '../../components/button/LmIconButton'
 //import { LmMultiSelect } from '../../components/form/select/LmMultiSelect'
 import { LmIcon } from '../../components/Icon/LmIcon'
 

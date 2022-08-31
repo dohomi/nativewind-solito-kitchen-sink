@@ -1,18 +1,28 @@
 import React from 'react'
 import Ionicons from '@expo/vector-icons/Ionicons'
 import { styled } from 'nativewind'
+import { LmColorText, LmCoreSizes } from '../../utils/daisyClassNames'
+import clsx from 'clsx'
+
+export type ioniconIconNames = keyof typeof Ionicons.glyphMap;
 
 type LmIconProps = {
-  name: keyof typeof Ionicons.glyphMap;
-  size?: number
-  color?: 'text-primary-content' | 'text-secondary-content' | 'text-accent-content' | 'text-neutral-content' | 'text-base-content' | 'text-warning-content' | 'text-error-content'
+  name: ioniconIconNames;
+  size?: LmCoreSizes
+  color?: LmColorText
 }
 
-const IonStyled = styled(Ionicons)
+const IonStyled = styled(Ionicons, '')
+const SizeMap: {[k in LmCoreSizes]: number} = {
+  xs: 12,
+  sm: 16,
+  md: 20,
+  lg: 28,
+  xl: 36
+}
 
 export function LmIcon({ color, name, size }: LmIconProps) {
   return (
-    <IonStyled name={name} size={size || 24}
-               className={color} />
+    <IonStyled name={name} className={clsx(color)} size={SizeMap[size || 'md']} />
   )
 }

@@ -1,7 +1,7 @@
 import { LmIconButton } from './LmIconButton'
 
 export default {
-  title: 'ui/form/LmIconButton',
+  title: 'ui/Button/LmIconButton',
   component: LmIconButton
 }
 
@@ -9,11 +9,12 @@ const Template = (args) => <LmIconButton {...args} />
 
 export const Basic = Template.bind({})
 Basic.args = {
-  icon: 'camera'
+  iconName: 'camera'
 }
 
-export const Contained = Template.bind({})
-Contained.args = {
-  icon: 'camera',
-  mode: 'contained'
+export const Colored = Template.bind({})
+Colored.args = {
+  iconName: 'camera',
+  iconColor: 'text-warning',
+  size: 'lg'
 }

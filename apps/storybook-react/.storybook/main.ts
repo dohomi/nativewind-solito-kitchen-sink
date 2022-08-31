@@ -8,6 +8,7 @@ const config = {
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
+    'storybook-addon-theme-changer',
     // 'storybook-addon-themes',
     {
       name: '@storybook/addon-react-native-web',

@@ -25,12 +25,14 @@ export const decorators = [(Story, props) => {
     () => {
       let active = true
       if (active) {
-        const rootEl = document.documentElement
-        rootEl?.setAttribute('data-scheme', theme)
+        // const rootEl = document.documentElement
+        // rootEl?.setAttribute('data-scheme', theme)
+        /*
         setColorScheme(theme)
         const sbMain: HTMLDivElement = document.querySelector('.sb-show-main') as HTMLDivElement
         console.log(sbMain)
         sbMain.style.background = 'inherit !important'
+         */
       }
       return () => {
         active = false
@@ -52,8 +54,8 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/
     }
-  },
-  backgrounds: {
+  }
+  /* backgrounds: {
     default: 'dark',
     values: [
       {
@@ -69,5 +71,16 @@ export const parameters = {
         value: '#50C878'
       }
     ]
-  }
+  } */
+}
+
+export const globalTypes = {
+  themes: {
+    defaultValue: [
+      "light",
+      "dark",
+      "emerald",
+      "cyberpunk"
+    ],
+  },
 }
