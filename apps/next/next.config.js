@@ -2,7 +2,6 @@ const { withExpo } = require('@expo/next-adapter')
 const withFonts = require('next-fonts')
 const withImages = require('next-images')
 const withPlugins = require('next-compose-plugins')
-const path = require('path')
 const withTM = require('next-transpile-modules')([
   'solito',
   'nativewind',
@@ -10,7 +9,7 @@ const withTM = require('next-transpile-modules')([
   'app'
 ])
 
-const transform = withPlugins([withTM, [withFonts, { projectRoot: __dirname }], withImages, withExpo])
+const transform = withPlugins([withTM, [withFonts], withImages, withExpo])
 
 /** @type {import('next').NextConfig} */
 const config = {
