@@ -15,6 +15,6 @@ Basic.args = {
 export const Colored = Template.bind({})
 Colored.args = {
   iconName: 'camera',
-  iconColor: 'text-warning',
+  iconColor: 'warning',
   size: 'lg'
 }

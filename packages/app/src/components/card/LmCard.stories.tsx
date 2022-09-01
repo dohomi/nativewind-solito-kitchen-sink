@@ -33,7 +33,7 @@ Glass.args = {
         <LmCardTitle>Life hack</LmCardTitle>
         <LmText>How to park your car at your garage?</LmText>
         <LmCardActions >
-          <LmButton className='btn btn-primary' title={'Action Button'}/>
+          <LmButton classNames='btn btn-primary' label={'Action Button'}/>
         </LmCardActions>
       </LmCardBody>
     </>

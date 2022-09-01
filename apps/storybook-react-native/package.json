@@ -28,6 +28,7 @@
     "@storybook/addon-ondevice-controls": "next",
     "@storybook/addon-ondevice-notes": "next",
     "@storybook/react-native": "next",
+    "storybook-addon-theme-changer": "^0.1.2",
     "app": "*",
     "expo": "46.0.8",
     "expo-asset": "~8.6.1",

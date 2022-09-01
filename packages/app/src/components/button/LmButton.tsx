@@ -1,7 +1,7 @@
 import { styled } from 'nativewind'
-import { TouchableOpacity } from 'react-native'
+import { GestureResponderEvent, TouchableOpacity } from 'react-native'
 import { ioniconIconNames, LmIcon } from '../Icon/LmIcon'
-import { LmButtonColor, LmColorText, LmCoreBtnSizes } from '../../utils/daisyClassNames'
+import { LmButtonColor, LmButtonSize } from '../../utils/daisyClassNames'
 import clsx from 'clsx'
 import { LmText } from '../text/LmText'
 
@@ -13,28 +13,45 @@ type LmButtonProps = {
   iconLeft?: ioniconIconNames
   iconRight?: ioniconIconNames
   color?: LmButtonColor
-  size?: LmCoreBtnSizes
+  size?: LmButtonSize
   outlined?: boolean
   loading?: boolean
+  disabled?: boolean
+  block?: boolean
+  wide?: boolean
+  glass?: boolean
+  classNames?: string
+  onPress?: (event: GestureResponderEvent) => void
 }
 
 
-export function LmButton({ label, iconLeft, iconRight, color, size, outlined, loading }: LmButtonProps) {
+export function LmButton(
+  {
+    label, iconLeft, iconRight,
+    color, size='md', outlined, loading,
+    wide, glass, disabled, block,
+    classNames, onPress
+  }: LmButtonProps) {
   return (
     <LmButtonStyled
       className={clsx(className, {
         ['btn-' + color]: color,
         ['btn-' + size]: size,
         'btn-outline': outlined,
-        'loading': loading
-      })}
+        'btn-wide': wide,
+        'btn-disabled': disabled,
+        'btn-block': block,
+        'loading': loading,
+        'glass': glass
+      }, classNames)}
+      onPress={onPress}
     >
       {iconLeft && (
-        <LmIcon key='icon' name={iconLeft} color={'text-inherit'} size={size} />
+        <LmIcon key='iconLeft' name={iconLeft} color={'inherit'} size={size} />
       )}
       <LmText key='text'>{label}</LmText>
       {iconRight && (
-        <LmIcon key='icon' name={iconRight} color={'text-inherit'} size={size} />
+        <LmIcon key='iconRight' name={iconRight} color={'inherit'} size={size} />
       )}
     </LmButtonStyled>
   )

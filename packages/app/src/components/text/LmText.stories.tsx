@@ -12,8 +12,14 @@ Basic.args = {
   children: 'some text'
 }
 
-export const LargeText = Template.bind({})
-LargeText.args = {
+export const CustomLarge = Template.bind({})
+CustomLarge.args = {
   children: 'some text',
-  className: 'text-4xl'
+  classNames: 'text-4xl'
+}
+
+export const Primary = Template.bind({})
+Primary.args = {
+  children: 'some text',
+  color: 'primary'
 }

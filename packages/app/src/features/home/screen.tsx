@@ -9,11 +9,11 @@ export function HomeScreen() {
   return (
     <View>
       <View className={'bg-sky-100 max-w-5xl'}>
-        <LmText className={'text-4xl'}>
+        <LmText classNames={'text-4xl'}>
           Some text
         </LmText>
-        <LmButton title={'Some Button'} />
-        <LmIconButton icon={'camera'} title={''} />
+        <LmButton label={'Some Button'} />
+        <LmIconButton iconName={'camera'}  />
         <RText className={'bg-sky-100'}>Blue text bg</RText>
       </View>
       <View />

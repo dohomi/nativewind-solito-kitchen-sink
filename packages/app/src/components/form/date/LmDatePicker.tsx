@@ -1,7 +1,8 @@
 import DateTimePicker from '@react-native-community/datetimepicker'
 import { useState } from 'react'
-import { Button, Platform } from 'react-native'
+import { Platform } from 'react-native'
 import { LmText } from '../../text/LmText'
+import { LmButton } from '../../button/LmButton'
 
 type LmDatePickerProps = {}
 
@@ -33,17 +34,21 @@ export function LmDatePicker({}: LmDatePickerProps) {
   }
   return (
     <>
-      <Button onPress={showDatepicker}>Show date picker</Button>
-      <Button onPress={showTimepicker}>Show time picker</Button>
+      <LmButton onPress={showDatepicker} label={'Show date picker'} />
+      <LmButton onPress={showTimepicker} label={'Show time picker'} />
       <LmText>selected: {date.toLocaleString()}</LmText>
-      {show && (
+      {
+        /*
+        show && (
         <DateTimePicker
           testID='dateTimePicker'
           value={date}
           is24Hour={true}
           onChange={onChange}
         />
-      )}
+      )
+         */
+      }
     </>
   )
 }

@@ -1,30 +1,31 @@
 import { View } from 'react-native'
 import { styled } from 'nativewind'
 import { LmText } from '../text/LmText'
+import { LmButton } from '../button/LmButton'
 
 export const LmCard = styled(View, 'card')
 export const LmCardBody = styled(View, 'card-body')
-export const LmCardTitleStyled = styled(LmText)
 export const LmCardActions = styled(View, 'card-actions justify-end')
 
 type LmCardWithActionProps = {
   title: string
   description: string
-  buttonText: string
+  buttonText: string,
+  classNames?: string
 }
 
 export function LmCardTitle({children}) {
-  return <LmText baseClassNames={'card-title'}>{children}</LmText>
+  return <LmText classNames={'card-title'}>{children}</LmText>
 }
 
 export function LmCardWithAction({title, description, buttonText}: LmCardWithActionProps){
   return (
     <LmCard>
       <LmCardBody>
-        <LmCardTitle>{title}</LmCardTitle>
+        <LmText classNames={'card-title'}>{title}</LmText>
         <LmText>{description}</LmText>
         <LmCardActions>
-          <button className={'btn btn-primary'}>{buttonText}</button>
+          <LmButton label={buttonText} color={'primary'}/>
         </LmCardActions>
       </LmCardBody>
     </LmCard>

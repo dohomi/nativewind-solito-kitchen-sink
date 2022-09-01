@@ -1,25 +1,26 @@
 import { styled } from 'nativewind'
-import { TouchableOpacity } from 'react-native'
+import { Pressable } from 'react-native'
 import { ioniconIconNames, LmIcon } from '../Icon/LmIcon'
-import { LmColorText, LmCoreBtnSizes } from '../../utils/daisyClassNames'
+import { LmColorText, LmButtonSize } from '../../utils/daisyClassNames'
 import clsx from 'clsx'
 
-const LmIconButtonStyled = styled(TouchableOpacity, 'btn btn-circle')
+const LmIconButtonStyled = styled(Pressable, 'btn btn-circle')
 
 type LmIconButtonProps = {
   iconName: ioniconIconNames
-  iconColor: LmColorText
-  size?: LmCoreBtnSizes
+  iconColor?: LmColorText
+  size?: LmButtonSize
   outlined?: boolean
+  classNames?: string
 }
 
-export function LmIconButton({ iconName, iconColor, size, outlined }: LmIconButtonProps) {
+export function LmIconButton({ iconName, iconColor, size, outlined, classNames }: LmIconButtonProps) {
 
   return (
     <LmIconButtonStyled className={clsx({
       ['btn-' + size]: size,
       'btn-outline': outlined
-    })
+    }, classNames)
     }>
       <LmIcon name={iconName} color={iconColor} size={size} />
     </LmIconButtonStyled>

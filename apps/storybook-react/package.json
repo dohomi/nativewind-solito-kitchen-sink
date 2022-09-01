@@ -23,7 +23,6 @@
     "@storybook/react": "~6.5.10",
     "@storybook/builder-webpack5": "^6.5.10",
     "@storybook/manager-webpack5": "^6.5.10",
-    "storybook-addon-themes": "^6.1.0",
     "storybook-addon-theme-changer": "^0.1.2",
     "@types/node": "16.11.9",
     "@types/react": "^18.0.17",

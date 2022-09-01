@@ -12,7 +12,7 @@ type LmIconProps = {
   color?: LmColorText
 }
 
-const IonStyled = styled(Ionicons, '')
+const IconStyled = styled(Ionicons, '')
 const SizeMap: {[k in LmCoreSizes]: number} = {
   xs: 12,
   sm: 16,
@@ -23,6 +23,6 @@ const SizeMap: {[k in LmCoreSizes]: number} = {
 
 export function LmIcon({ color, name, size }: LmIconProps) {
   return (
-    <IonStyled name={name} className={clsx(color)} size={SizeMap[size || 'md']} />
+    <IconStyled name={name} className={clsx({ ['text-' + color]: color })} size={SizeMap[size || 'md']} />
   )
 }

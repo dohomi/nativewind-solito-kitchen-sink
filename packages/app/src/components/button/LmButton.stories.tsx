@@ -12,9 +12,21 @@ Basic.args = {
   label: 'Basic'
 }
 
+export const Disabled = Template.bind({})
+Disabled.args = {
+  label: 'Disabled',
+  disabled: true
+}
+
+export const Block = Template.bind({})
+Block.args = {
+  label: 'Block',
+  block: true
+}
+
 export const IconButton = Template.bind({})
 IconButton.args = {
-  label: 'Basic',
+  label: 'IconButton',
   iconLeft: 'camera',
   iconRight: 'eye'
 }
@@ -40,4 +52,26 @@ Loading.args = {
   iconLeft: 'camera',
   iconRight: 'eye',
   loading: true
+}
+
+export const Glass = Template.bind({})
+Glass.args = {
+  label: 'Glass',
+  iconLeft: 'camera',
+  glass: true
+}
+
+export const Wide = Template.bind({})
+Wide.args = {
+  label: 'Wide',
+  iconLeft: 'camera',
+  wide: true
+}
+
+export const CustomClassNames = Template.bind({})
+CustomClassNames.args = {
+  label: 'CustomClassNames',
+  iconLeft: 'camera',
+  loading: true,
+  classNames: 'mt-8 ml-4'
 }

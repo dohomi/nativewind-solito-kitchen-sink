@@ -14,11 +14,11 @@ export function OverviewComopnents() {
   return (
     <LmView>
       <LmText>Hello World</LmText>
-      <LmButton title={'Some Button'} />
+      <LmButton label={'Some Button'} />
       <LmSelect options={options} />
-      <LmIconButton title={'Some IconButton'} icon={'camera'} mode={'contained'}/>
+      <LmIconButton iconName={'camera'} outlined={true} size={'lg'}/>
       {/* {!(Platform.OS === 'web') && <LmMultiSelect multiple={true} />} */}
-      <LmIcon name={'basketball'} color={'red'} size={50}/>
+      <LmIcon name={'basketball'} color={'primary'} size={'lg'}/>
     </LmView>
   )
 }

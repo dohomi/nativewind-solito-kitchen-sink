@@ -1,5 +1,35 @@
 export type LmColorsCore = 'primary' | 'secondary' | 'accent' | 'info' | 'success' | 'warning' | 'error'
 
+const LmInputBorderClass = 'input-bordered'
+
+export type LmInputColor =
+  'primary' |
+  'secondary' |
+  'accent' |
+  'info' |
+  'success' |
+  'warning' |
+  'error'
+
+export type LmInputColorClasses =
+  'input-ghost' |
+  'input-primary' |
+  'input-secondary' |
+  'input-accent' |
+  'input-info' |
+  'input-success' |
+  'input-warning' |
+  'input-error'
+
+export type LmInputSize = 'xs' | 'sm' | 'md' | 'lg'
+
+export type LmInputSizeClasses =
+  'input'
+  | 'input-xs'
+  | 'input-sm'
+  | 'input-md'
+  | 'input-lg'
+
 export type LmButtonColor =
   'primary'
   | 'secondary'
@@ -33,6 +63,17 @@ export type LmColorTextContent =
   'text-error-content'
 
 export type LmColorText =
+  'primary' |
+  'secondary' |
+  'accent' |
+  'neutral' |
+  'info' |
+  'success' |
+  'warning' |
+  'error' |
+  'inherit'
+
+export type LmColorTextClasses =
   'text-primary' |
   'text-secondary' |
   'text-accent' |
@@ -43,8 +84,9 @@ export type LmColorText =
   'text-error' |
   'text-inherit'
 
-export type LmButtonSizes = 'btn-lg' | 'btn-md' | 'btn-sm' | 'btn-xs'
-export type LmFontSizes = 'text-xs' | 'text-md' | 'text-sm' | 'text-xl' | 'text-lg'
+export type LmButtonSizeClasses = 'btn-lg' | 'btn-md' | 'btn-sm' | 'btn-xs'
+export type LmFontSizeClasses = 'text-xs' | 'text-md' | 'text-sm' | 'text-xl' | 'text-lg'
 
 export type LmCoreSizes = 'xl' | 'lg' | 'md' | 'sm' | 'xs'
-export type LmCoreBtnSizes = 'lg' | 'md' | 'sm' | 'xs'
+export type LmButtonSize = 'lg' | 'md' | 'sm' | 'xs'
+export type LmFontSizes = 'lg' | 'xl' | 'sm' | 'md' | 'xs'
