@@ -1,12 +1,13 @@
 import { styled } from 'nativewind'
-import { GestureResponderEvent, TouchableOpacity } from 'react-native'
+import { GestureResponderEvent, Pressable } from 'react-native'
 import { ioniconIconNames, LmIcon } from '../Icon/LmIcon'
 import { LmButtonColor, LmButtonSize } from '../../utils/daisyClassNames'
-import clsx from 'clsx'
 import { LmText } from '../text/LmText'
+import clsx from 'clsx'
 
-const className = 'btn flex-row gap-2'
-const LmButtonStyled = styled(TouchableOpacity, className)
+
+// const className = 'btn flex-row gap-2'
+const LmButtonStyled = styled(Pressable)
 
 type LmButtonProps = {
   label: string
@@ -28,21 +29,22 @@ type LmButtonProps = {
 export function LmButton(
   {
     label, iconLeft, iconRight,
-    color, size='md', outlined, loading,
+    color, size = 'md', outlined, loading,
     wide, glass, disabled, block,
     classNames, onPress
   }: LmButtonProps) {
   return (
     <LmButtonStyled
-      className={clsx(className, {
-        ['btn-' + color]: color,
-        ['btn-' + size]: size,
-        'btn-outline': outlined,
-        'btn-wide': wide,
-        'btn-disabled': disabled,
-        'btn-block': block,
-        'loading': loading,
-        'glass': glass
+      style={{}}
+      className={clsx('!btn flex-row gap-2', {
+        ['!btn-' + color]: color,
+        ['!btn-' + size]: size,
+        '!btn-outline': outlined,
+        '!btn-wide': wide,
+        '!btn-disabled': disabled,
+        '!btn-block': block,
+        '!loading': loading,
+        '!glass': glass
       }, classNames)}
       onPress={onPress}
     >

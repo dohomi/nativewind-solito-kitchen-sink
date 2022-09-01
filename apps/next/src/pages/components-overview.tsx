@@ -1,3 +1,3 @@
-import { OverviewComopnents } from 'app/src/features/overview-components/OverviewComopnents'
+import { OverviewComponents } from 'app/src/features/overview-components/OverviewComponents'
 
-export default OverviewComopnents
+export default OverviewComponents

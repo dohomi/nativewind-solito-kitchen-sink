@@ -1,10 +1,10 @@
-import { OverviewComopnents } from './OverviewComopnents'
+import { OverviewComponents } from './OverviewComponents'
 
 export default {
-  title: 'screen/OverviewComopnents',
-  component: OverviewComopnents
+  title: 'screen/OverviewComponents',
+  component: OverviewComponents
 }
 
-const Template = ({args}) => <OverviewComopnents {...args}/>
+const Template = ({ args }) => <OverviewComponents {...args} />
 
 export const Basic = Template.bind({})

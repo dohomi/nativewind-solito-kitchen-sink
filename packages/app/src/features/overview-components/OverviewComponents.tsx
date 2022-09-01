@@ -10,15 +10,15 @@ import { LmIcon } from '../../components/Icon/LmIcon'
 
 const options = selectDemoOptions
 
-export function OverviewComopnents() {
+export function OverviewComponents() {
   return (
     <LmView>
       <LmText>Hello World</LmText>
       <LmButton label={'Some Button'} />
       <LmSelect options={options} />
-      <LmIconButton iconName={'camera'} outlined={true} size={'lg'}/>
+      <LmIconButton iconName={'camera'} outlined={true} size={'lg'} />
       {/* {!(Platform.OS === 'web') && <LmMultiSelect multiple={true} />} */}
-      <LmIcon name={'basketball'} color={'primary'} size={'lg'}/>
+      <LmIcon name={'basketball'} color={'primary'} size={'lg'} />
     </LmView>
   )
 }

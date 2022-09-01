@@ -1,15 +1,15 @@
-import "expo-dev-client";
+import 'expo-dev-client'
 import * as SplashScreen from 'expo-splash-screen'
 import { NativeNavigation } from 'app/src/navigation/native'
 import { LmProvider } from 'app/src/provider'
 import { useEffect, useState } from 'react'
-import { connectToDevTools } from "react-devtools-core";
+import { connectToDevTools } from 'react-devtools-core'
 
 if (__DEV__) {
   connectToDevTools({
-    host: "localhost",
-    port: 8097,
-  });
+    host: 'localhost',
+    port: 8097
+  })
 }
 
 export default function App() {
