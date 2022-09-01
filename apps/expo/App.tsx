@@ -4,6 +4,7 @@ import { NativeNavigation } from 'app/src/navigation/native'
 import { LmProvider } from 'app/src/provider'
 import { useEffect, useState } from 'react'
 import { connectToDevTools } from 'react-devtools-core'
+import './nativewind-output'
 
 if (__DEV__) {
   connectToDevTools({
