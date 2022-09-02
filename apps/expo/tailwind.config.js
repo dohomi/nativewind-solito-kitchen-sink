@@ -1,4 +1,7 @@
 const defaultConfig = require('app/tailwind.config')
 module.exports = {
-  ...defaultConfig
+  ...defaultConfig,
+  plugins: [
+    // require('nativewind/tailwind/css'),
+    require('daisyui')]
 }

@@ -1,23 +1,32 @@
 import { Text } from 'react-native'
 import { styled } from 'nativewind'
 import { PropsWithChildren } from 'react'
+import { LmColorText, LmFontSizes } from '../../utils/daisyClassNames'
 import clsx from 'clsx'
-import { LmColorText, LmCoreSizes, LmFontSizes } from '../../utils/daisyClassNames'
 
 type LmTextProps = PropsWithChildren<{
-  classNames?: string
+  className?: string
   color?: LmColorText
   size?: LmFontSizes
 }>
 
-const LmTextStyled = styled(Text)
 
-export function LmText({ children, classNames, color, size }: LmTextProps) {
-  return <LmTextStyled className={clsx( classNames, {
-    ['text-' + color]: color,
-    ['text-' + size]: size,
-    'text-inherit': !color
-  })}>{children}</LmTextStyled>
+function CustomText({ color, size, ...rest }: LmTextProps) {
+  return <Text
+    style={{
+      color: color ? undefined : 'inherit'
+    }}
+    className={clsx({
+      ['text-' + color]: color,
+      ['text-' + size]: size
+      // 'text-inherit': !color
+    })} {...rest} />
 }
 
-
+export const LmText = styled(CustomText, {
+  props: {
+    size: true,
+    color: true
+  }
+})
+LmText.displayName = 'LmText'

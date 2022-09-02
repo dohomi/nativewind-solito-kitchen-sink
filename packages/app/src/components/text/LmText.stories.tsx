@@ -18,6 +18,13 @@ CustomLarge.args = {
   classNames: 'text-4xl'
 }
 
+export const TextLg = Template.bind({})
+TextLg.args = {
+  children: 'some text',
+  classNames: 'text-lg'
+}
+
+
 export const Primary = Template.bind({})
 Primary.args = {
   children: 'some text',
