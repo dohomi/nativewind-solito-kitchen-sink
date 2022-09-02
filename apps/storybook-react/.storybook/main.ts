@@ -20,8 +20,8 @@ const config = {
           'app'
         ],
         babelPlugins: [
-          'react-native-reanimated/plugin'
-          // 'nativewind/babel'
+          'react-native-reanimated/plugin',
+          'nativewind/babel'
         ]
       }
     }

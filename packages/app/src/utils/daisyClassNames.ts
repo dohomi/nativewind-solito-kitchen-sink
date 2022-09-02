@@ -85,8 +85,7 @@ export type LmColorTextClasses =
   'text-inherit'
 
 export type LmButtonSizeClasses = 'btn-lg' | 'btn-md' | 'btn-sm' | 'btn-xs'
-export type LmFontSizeClasses = 'text-xs' | 'text-md' | 'text-sm' | 'text-xl' | 'text-lg'
 
 export type LmCoreSizes = 'xl' | 'lg' | 'md' | 'sm' | 'xs'
 export type LmButtonSize = 'lg' | 'md' | 'sm' | 'xs'
-export type LmFontSizes = 'lg' | 'xl' | 'sm' | 'md' | 'xs' | '4xl'
+export type LmFontSizes = 'text-lg' | 'text-xl' | 'text-sm' | 'text-md' | 'text-xs' | 'text-4xl'
