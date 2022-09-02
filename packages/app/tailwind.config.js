@@ -11,7 +11,7 @@ module.exports = {
   // darkMode: 'class',
   // important: 'html',
   plugins: [
-    require('nativewind/tailwind/css'),
-    require('daisyui')
+    require('nativewind/tailwind/css')
+    // require('daisyui')
   ]
 }

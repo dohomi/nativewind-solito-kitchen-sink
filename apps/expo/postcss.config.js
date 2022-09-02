@@ -1,8 +1,10 @@
-const config = require('../next/postcss.config')
-
 module.exports = {
-  ...config,
-  'nativewind/postcss': {
-    output: 'nativewind-output.js'
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {}
+    // 'postcss-css-variables': {}
+    // 'nativewind/postcss': {
+    //   output: 'nativewind-output.js'
+    // }
   }
 }

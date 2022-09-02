@@ -1,9 +1,10 @@
 import { styled } from 'nativewind'
-import { Pressable, PressableProps } from 'react-native'
+import { Pressable, PressableProps, Text } from 'react-native'
 import { ioniconIconNames, LmIcon } from '../Icon/LmIcon'
 import { LmButtonColor, LmButtonSize } from '../../utils/daisyClassNames'
-import { LmText } from '../text/LmText'
 import clsx from 'clsx'
+import { LmView } from '../layout/LmView'
+import { buttonStyles } from './buttonStyles'
 
 
 // const className = 'btn flex-row gap-2'
@@ -15,7 +16,10 @@ type LmButtonProps = PressableProps & {
   iconRight?: ioniconIconNames
   color?: LmButtonColor
   size?: LmButtonSize
+  gradientDuoTone?: any;
+  gradientMonochrome?: any;
   outlined?: boolean
+  pill?: boolean;
   loading?: boolean
   disabled?: boolean
   block?: boolean
@@ -24,36 +28,66 @@ type LmButtonProps = PressableProps & {
   classNames?: string
 }
 
-
 export function LmButton(
   {
     label, iconLeft, iconRight,
-    color, size = 'md', outlined, loading,
-    wide, glass, disabled, block,
+    color = 'info',
+    size = 'md',
+    outlined,
+    gradientDuoTone,
+    gradientMonochrome,
+    loading,
+    wide,
+    glass,
+    disabled,
+    block,
+    pill = false,
     classNames,
     ...rest
   }: LmButtonProps) {
+  const button = buttonStyles.button
+
+  //clsx('btn flex-row gap-2', {
+  //         ['btn-' + color]: color,
+  //         ['btn-' + size]: size,
+  //         'btn-outline': outlined,
+  //         'btn-wide': wide,
+  //         'btn-disabled': disabled,
+  //         'btn-block': block,
+  //         'loading': loading,
+  //         'glass': glass
+  //       }, classNames)
   return (
     <LmButtonStyled
       {...rest}
-      className={clsx('btn flex-row gap-2', {
-        ['btn-' + color]: color,
-        ['btn-' + size]: size,
-        'btn-outline': outlined,
-        'btn-wide': wide,
-        'btn-disabled': disabled,
-        'btn-block': block,
-        'loading': loading,
-        'glass': glass
-      }, classNames)}
+      className={clsx(
+        disabled && button.disabled,
+        !gradientDuoTone && !gradientMonochrome && button[color],
+        gradientDuoTone && !gradientMonochrome && button.gradientDuoTone[gradientDuoTone],
+        !gradientDuoTone && gradientMonochrome && button.gradient[gradientMonochrome],
+        // groupTheme.position[positionInGroup],
+        outlined && button.outline.color[color],
+        button.base,
+        button.pill[pill ? 'on' : 'off']
+      )}
     >
-      {iconLeft && (
-        <LmIcon key='iconLeft' name={iconLeft} color={'inherit'} size={size} />
-      )}
-      <LmText key='text'>{label}</LmText>
-      {iconRight && (
-        <LmIcon key='iconRight' name={iconRight} color={'inherit'} size={size} />
-      )}
+      <LmView
+        className={clsx(
+          'flex-row gap-2',
+          button.inner.base,
+          // button.inner.position[positionInGroup],
+          button.outline[outlined ? 'on' : 'off'],
+          button.outline.pill[outlined && pill ? 'on' : 'off'],
+          button.size[size])
+        }>
+        {iconLeft && (
+          <LmIcon key='iconLeft' name={iconLeft} color={'inherit'} size={size} />
+        )}
+        <Text className={button.label}>{label}</Text>
+        {iconRight && (
+          <LmIcon key='iconRight' name={iconRight} color={'inherit'} size={size} />
+        )}
+      </LmView>
     </LmButtonStyled>
   )
 }
