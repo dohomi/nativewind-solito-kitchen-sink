@@ -6,6 +6,7 @@ const withTM = require('next-transpile-modules')([
   'solito',
   'nativewind',
   'react-native-vector-icons',
+  'flowbite',
   'app'
 ])
 

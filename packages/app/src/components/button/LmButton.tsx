@@ -4,7 +4,6 @@ import { ioniconIconNames, LmIcon } from '../Icon/LmIcon'
 import { LmButtonColor, LmButtonSize } from '../../utils/daisyClassNames'
 import clsx from 'clsx'
 import { LmView } from '../layout/LmView'
-import { buttonStyles } from './buttonStyles'
 
 
 // const className = 'btn flex-row gap-2'
@@ -45,7 +44,6 @@ export function LmButton(
     classNames,
     ...rest
   }: LmButtonProps) {
-  const button = buttonStyles.button
 
   //clsx('btn flex-row gap-2', {
   //         ['btn-' + color]: color,
@@ -61,29 +59,29 @@ export function LmButton(
     <LmButtonStyled
       {...rest}
       className={clsx(
-        disabled && button.disabled,
-        !gradientDuoTone && !gradientMonochrome && button[color],
-        gradientDuoTone && !gradientMonochrome && button.gradientDuoTone[gradientDuoTone],
-        !gradientDuoTone && gradientMonochrome && button.gradient[gradientMonochrome],
-        // groupTheme.position[positionInGroup],
-        outlined && button.outline.color[color],
-        button.base,
-        button.pill[pill ? 'on' : 'off']
+        // disabled && button.disabled,
+        // !gradientDuoTone && !gradientMonochrome && button[color],
+        // gradientDuoTone && !gradientMonochrome && button.gradientDuoTone[gradientDuoTone],
+        // !gradientDuoTone && gradientMonochrome && button.gradient[gradientMonochrome],
+        // // groupTheme.position[positionInGroup],
+        // outlined && button.outline.color[color],
+        // button.base,
+        // button.pill[pill ? 'on' : 'off']
       )}
     >
       <LmView
         className={clsx(
-          'flex-row gap-2',
-          button.inner.base,
-          // button.inner.position[positionInGroup],
-          button.outline[outlined ? 'on' : 'off'],
-          button.outline.pill[outlined && pill ? 'on' : 'off'],
-          button.size[size])
-        }>
+          'flex-row gap-2'
+          // button.inner.base,
+          // // button.inner.position[positionInGroup],
+          // button.outline[outlined ? 'on' : 'off'],
+          // button.outline.pill[outlined && pill ? 'on' : 'off'],
+          // button.size[size]
+        )}>
         {iconLeft && (
           <LmIcon key='iconLeft' name={iconLeft} color={'inherit'} size={size} />
         )}
-        <Text className={button.label}>{label}</Text>
+        <Text>{label}</Text>
         {iconRight && (
           <LmIcon key='iconRight' name={iconRight} color={'inherit'} size={size} />
         )}
